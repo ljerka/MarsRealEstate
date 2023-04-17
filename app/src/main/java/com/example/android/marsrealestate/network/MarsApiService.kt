@@ -23,7 +23,7 @@ private val retrofit = Retrofit.Builder()
 
 interface MarsApiService {
     @GET("realestate")
-    fun getProperties():
+    suspend fun getProperties():
             List<MarsProperty>
             // gore je s korutinama, dolje je kao je bilo prije
             //Call<List<MarsProperty>>
